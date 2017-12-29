@@ -181,7 +181,8 @@ So, now we have a websocket server that is posting new data every second or so, 
 
 Then we need a function that will update our charts any time the websocket publishes 
 and update. We do that with Websocket’s `onmessage()` function:
-```
+
+{% highlight python %}
 connection.onmessage = function(event){  
 
 //get data & parse  
@@ -197,7 +198,7 @@ xfilter.add(updateObject);
 dc.redrawAll(); 
 
 }   
-```
+{% endhighlight %}
 Here’s the function in code:
 
 <script src="https://gist.github.com/benjaminmbrown/f90ef182b3fa87f24603.js"></script>
