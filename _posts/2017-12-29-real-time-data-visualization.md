@@ -20,7 +20,7 @@ Just some examples where you might want real-time data viz include but aren’t 
 - IoT devices
 - Anything else that requires real-time monitoring
  
- ### End product:
+ ### End product
  <iframe width="560" height="315" src="https://www.youtube.com/embed/VI3TnZugspc" frameborder="0" gesture="media" allow="encrypted-media" allowfullscreen></iframe>
 
 
