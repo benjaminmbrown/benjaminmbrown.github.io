@@ -3,7 +3,7 @@ layout: post
 title: [Tutorial] How to Build real-time data visualization with D3, Crossfilter, and Websockets in Python by example
 ---
 
-##What is Real Time Data Visualization
+## What is Real Time Data Visualization
 The vast majority of data visualization consists of a static set of data that is pulled upon user request. So, the data only gets updated when the user wants it. It is a request-response pattern. User requests info, server responds with data & visualizations are populated.
 
 Real-time data visualization is applicable when you have data that is rapidly updating in real time and your application needs to keep a ‘pulse’ on and monitor data passively. This means we have charts that update automatically while you keep your browser open.
@@ -21,11 +21,11 @@ Just some examples where you might want real-time data viz include but aren’t 
 - Anything else that requires real-time monitoring
  
 
-###What we are using
-####Languages: 
+### What we are using
+#### Languages: 
 - Python
 - Javascript
-####HTML Libraries:
+#### JS Libraries:
 - d3.js
 - crossfilter.js
 - dc.js : makes d3 and crossfilter work swimmingly
@@ -35,10 +35,10 @@ We are going to use these tools to build a websocket server that publishes some 
 
 Finally, we will have our d3 chart connect to our websocket server, and updates to the chart will happen in real time. It’ll be pretty sweet. 
 
-##Before we start & setup
+## Before we start & setup
 I’m using python 2.7 for this. 
 
-####Download Python [here](https://www.python.org/download/releases/2.7/). Install it then open a cmd or terminal and type “python” to ensure proper setup - if you get a command prompt everything should be good. 
+#### Download Python [here](https://www.python.org/download/releases/2.7/). Install it then open a cmd or terminal and type “python” to ensure proper setup - if you get a command prompt everything should be good. 
 
 If you have issues or errors  installing python there are plenty of resources on stackoverflow to help better than I can. 
 
@@ -48,7 +48,7 @@ If you have issues or errors  installing python there are plenty of resources on
 
 - Create a new folder called ‘rt-data-viz’  
 
-##Building A Simple Websocket Server in Python
+## Building A Simple Websocket Server in Python
 First we’ll build our data source. For this tutorial we’re building a simple websocket server that periodically sends out new data.
 
 In your ‘rt-data-viz’ folder, create a new file & save it with the name “websocket_server.py”
@@ -79,7 +79,7 @@ After we send the message we use ioLoop to create a timeout that will send data 
 
 We can start this server by going to our command prompt in the rt-data-viz folder and typing `python websocket_server.py`. You’ll notice nothing will happen. This is because in order for the socket to become active, we need to have our client-side code open the connection on that port. We’ll be able to see this after we create & run our client-side code next.
 
-##Building our Charts with D3 and Crossfilter
+## Building our Charts with D3 and Crossfilter
 
 We’re going to use `d3.js` and `crossfilter.js` to create two charts that share the same data. 
 
@@ -167,7 +167,7 @@ This is cool, you’ll want to see it in action. You’ll need to run a local we
 
 Keep your terminal open and open a tab on your web browser of choice. Go to the address http://localhost:3000/ to see it live.
 
-##Updating D3 Charts with Real-Time Updates from Websocket Server
+## Updating D3 Charts with Real-Time Updates from Websocket Server
 
 So, now we have a websocket server that is posting new data every second or so, and and we have some static charts that expose d3 and crossfilter functionality. We gotta make them talk now. We now need to modify our chart code to connect to the websocket , handle data from the websocket, and correctly update the charting solution in real-time. In the javascript of our index file, we need to create a new websocket connection that connects to our websocket_server.py on port 8001. We do this by creating a new websocket like so:    
 
@@ -213,7 +213,7 @@ Then open another prompt and run the client:
 
 Open your localhost:3000 in your browser and after a few seconds you should see the charts updating!  Not only are they updating with new data from the websocket server, but you can click on the charts and they will crossfilter each other. Really flippin cool.
 
-##Conclusion
+## Conclusion
 
 We’ve covered websockets, d3, crossfilter, and dcjs. Hopefully you have taken a lot of value out of my efforts here! Let me know what you think. Tweet me [@benjaminmbrown](http://twitter.com/benjaminmbrown) for fastest responses.
 

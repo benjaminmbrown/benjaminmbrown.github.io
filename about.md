@@ -10,6 +10,9 @@ Some information about you!
 
 A place to include any other types of information that you'd like to include about yourself.
 
-### Contact me
 
-[email@domain.com](mailto:email@domain.com)
+### Contact
+Linkedin: [benjaminmichaelbrown](https://www.linkedin.com/in/benjaminmichaelbrown/)
+Twitter: [benjaminmbrown](http://twitter.com/benjaminmbrown)
+Github: [benjaminmbrown](http://github.com/benjaminmbrown)
+Site: [benjaminmbrown.github.io](benjaminmbrown.github.io)
