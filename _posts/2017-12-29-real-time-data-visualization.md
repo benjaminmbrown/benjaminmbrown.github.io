@@ -63,13 +63,15 @@ In websocket_server.py, we can start coding now.
 
 First, import all required packages:
 
-```import time
+{% highlight python %}
+import time
 import random
 import json
 import datetime
 from tornado import websocket, web, ioloop
 from datetime import timedelta
-from random import randint ```
+from random import randint
+{% endhighlight %}
 
  Using tornado’s websocket, we need to build a handler class. I’m adding some empty functions that we’ll fill out next:
  
